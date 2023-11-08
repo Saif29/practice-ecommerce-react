@@ -5,17 +5,17 @@ import { useDispatch } from "react-redux";
 import { cartAction } from "../../features/cartReducer";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState } from "react";
 // import Axios from "axios";
-import InfiniteScroll from "react-infinite-scroll-component";
+// import InfiniteScroll from "react-infinite-scroll-component";
 
 const Products = () => {
-    const [x, setX] = useState(0);
+    // const [x, setX] = useState(0);
     const navigate = useNavigate();
-    const total = 29;
+    // const total = 29;
     //const productsList = require("../../data/allProducts.json");
     const [productsList, setProductsList] = useState([]);
-    const limitPerPage = 5;
+    // const limitPerPage = 5;
     // const fetchData = () => {
     //     setTimeout(() => {
     //         let pageNo = Math.ceil(productsList.length / limitPerPage) + 1;

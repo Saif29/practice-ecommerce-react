@@ -2,7 +2,6 @@ import "./Cart.css";
 import { FaTrash } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { emptyCartAction, removeItemAction } from "../../features/cartReducer";
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
@@ -11,11 +10,11 @@ const Cart = () => {
     const navigate = useNavigate();
     var total = 0;
     const shipping = 200;
-    const [x, setX] = useState(0);
+    // const [x, setX] = useState(0);
 
     const deleteItem = (item) => {
         dispatch(removeItemAction(item));
-        setX(0);
+        // setX(0);
     };
 
     let finalList = [];
