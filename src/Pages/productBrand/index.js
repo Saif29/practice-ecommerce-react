@@ -5,17 +5,21 @@ import { useDispatch } from "react-redux";
 import { cartAction } from "../../features/cartReducer";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { useState } from "react";
-import Axios from 'axios';
+import { useEffect, useState } from "react";
+// import Axios from 'axios';
 
 const ProductBrand = () => {
     const { brand } = useParams();
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [productsList, setProductsList] = useState([]);
-    Axios.get("http://localhost:3001/products").then((Response) => {
-        setProductsList(Response.data);
-    })
+    // Axios.get("http://localhost:3001/products").then((Response) => {
+    //     setProductsList(Response.data);
+    // })
+    const allProducts = require("../../data/allProducts.json");
+    useEffect(()=>{
+        setProductsList(allProducts)
+    }, [allProducts])
     const filtered = productsList.filter((x) => {
         return x.brand === brand;
     });

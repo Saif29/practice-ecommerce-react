@@ -6,7 +6,7 @@ import { cartAction } from "../../features/cartReducer";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useEffect, useState, Suspense } from "react";
-import Axios from "axios";
+// import Axios from "axios";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const Products = () => {
@@ -16,25 +16,30 @@ const Products = () => {
     //const productsList = require("../../data/allProducts.json");
     const [productsList, setProductsList] = useState([]);
     const limitPerPage = 5;
-    const fetchData = () => {
-        setTimeout(() => {
-            let pageNo = Math.ceil(productsList.length / limitPerPage) + 1;
-            console.log(
-                "page no: " +
-                    pageNo +
-                    "limit: " +
-                    limitPerPage +
-                    "len: " +
-                    productsList.length
-            );
-            Axios.get(
-                `http://localhost:3001/products?_limit=${limitPerPage}&_page=${pageNo}`
-            ).then((Response) => {
-                const data = [...productsList, ...Response.data];
-                setProductsList(data);
-            });
-        }, 1000);
-    };
+    // const fetchData = () => {
+    //     setTimeout(() => {
+    //         let pageNo = Math.ceil(productsList.length / limitPerPage) + 1;
+    //         console.log(
+    //             "page no: " +
+    //                 pageNo +
+    //                 "limit: " +
+    //                 limitPerPage +
+    //                 "len: " +
+    //                 productsList.length
+    //         );
+    //         Axios.get(
+    //             `http://localhost:3001/products?_limit=${limitPerPage}&_page=${pageNo}`
+    //         ).then((Response) => {
+    //             const data = [...productsList, ...Response.data];
+    //             setProductsList(data);
+    //         });
+    //     }, 1000);
+    // };
+    
+    const allProducts = require("../../data/allProducts.json");
+    useEffect(()=>{
+        setProductsList(allProducts)
+    }, [allProducts])
     const dispatch = useDispatch();
     const [show, setShow] = useState(false);
 
@@ -46,12 +51,12 @@ const Products = () => {
         setShow(true);
     };
 
-    useEffect(() => {
-        if (x === 0) {
-            fetchData();
-            setX(1);
-        }
-    });
+    // useEffect(() => {
+    //     if (x === 0) {
+    //         fetchData();
+    //         setX(1);
+    //     }
+    // });
 
     const inStock = (q) => {
         if (q > 0) {
@@ -67,13 +72,13 @@ const Products = () => {
                 <h1>All Products</h1>
             </div>
             <div className="products-container">
-                <InfiniteScroll
+                {/* <InfiniteScroll
                     dataLength={productsList.length} //This is important field to render the next data
-                    next={fetchData}
+                    // next={fetchData}
                     hasMore={productsList.length < total}
                     loader={<h4>Loading...</h4>}
                 >
-                    <Suspense fallback={<div>Loading...</div>}>
+                    <Suspense fallback={<div>Loading...</div>}> */}
                         {productsList.map((p) => {
                             const id = p.id;
                             return (
@@ -127,8 +132,8 @@ const Products = () => {
                                 </div>
                             );
                         })}
-                    </Suspense>
-                </InfiniteScroll>
+                    {/* </Suspense>
+                </InfiniteScroll> */}
 
                 <div style={{ clear: "both" }}></div>
             </div>
