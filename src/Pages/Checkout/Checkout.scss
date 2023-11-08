@@ -1,0 +1,44 @@
+.checkout-page {
+    padding: 3%;
+    width: 100%;;
+}
+
+.checkout-form {
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2%;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    margin: 2% 0% 2% 0%;
+}
+
+.label-div {
+    width: 20%;
+}
+
+.input-div {
+    width: 50%;
+    input {
+        width: 100%;
+        padding: 1%;
+    }
+    textarea {
+        width: 100%;
+        padding: 1%;
+    }
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    .checkout-btn {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 2% 5% 2% 5%;
+        cursor: pointer;
+    }
+}

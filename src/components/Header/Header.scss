@@ -1,0 +1,51 @@
+.header {
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 10vh;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: xx-large;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.title-link {
+    text-decoration: none;
+    color: white;
+}
+
+.cart-div {
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+  
+.label-warning[href],
+.badge-warning[href] {
+    background-color: #c67605;
+}
+#lblCartCount {
+    font-size: 14px;
+    font-weight: bold;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px; 
+}

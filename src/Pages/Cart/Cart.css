@@ -1,0 +1,91 @@
+.cart-page {
+  width: 90%;
+  padding: 3%;
+}
+
+.cart-container h1 {
+  text-align: center;
+}
+
+.cart-inner-container {
+  display: flex;
+}
+
+.cart-table-div {
+  width: 60%;
+  padding: 1%;
+}
+.cart-table-div table {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.cart-table-div table thead {
+  background-color: black;
+  color: white;
+}
+.cart-table-div table thead th {
+  padding: 2% 0% 2% 0%;
+  text-align: center;
+}
+.cart-table-div table tbody tr {
+  border-bottom: 1px solid black;
+}
+.cart-table-div table tbody td {
+  text-align: center;
+  padding: 2% 0% 2% 0%;
+}
+.cart-table-div table tbody td input {
+  width: 30px;
+  padding: 1%;
+}
+
+.cart-total-div {
+  width: 35%;
+  padding: 1%;
+  border: 2px solid black;
+  margin: 1% 0% 0% 3%;
+  border-radius: 20px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.cart-total-div h3 {
+  text-align: center;
+}
+
+.inner-total-div {
+  width: 100%;
+}
+
+.total-inner-1 {
+  padding-bottom: 2%;
+  border-bottom: 1px solid black;
+}
+.total-inner-1 div {
+  display: flex;
+}
+.total-inner-1 p {
+  width: 60%;
+}
+
+.total-inner-2 {
+  padding: 5% 0% 5% 0%;
+  display: flex;
+}
+.total-inner-2 p {
+  width: 60%;
+}
+
+.td-delete {
+  cursor: pointer;
+  color: red;
+}
+
+.cart-total-buttons button {
+  width: 45%;
+  padding: 5% 0% 5% 0%;
+  margin: 2%;
+  border: none;
+  color: white;
+  cursor: pointer;
+}/*# sourceMappingURL=Cart.css.map */
